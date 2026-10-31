@@ -1,25 +1,4 @@
----
-title: VN-CoastSeg-Mask2Former Coastal Mangrove and Aquaculture Monitoring
-emoji: 🌊
-colorFrom: blue
-colorTo: green
-sdk: gradio
-sdk_version: 5.0.0
-app_file: src/app.py
-pinned: false
-license: apache-2.0
-tags:
-  - earth-observation
-  - multispectral
-  - mask2former
-  - landsat-8
-  - vietnam-coastal-monitoring
-  - remote-sensing
-  - geospatial
-  - mangrove
-  - aquaculture
-  - ssl4eo
----
+
 
 # VN-CoastSeg-Mask2Former: Coastal Mangrove & Aquaculture Monitoring in Vietnam
 
