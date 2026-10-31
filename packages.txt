@@ -1,0 +1,5 @@
+libgdal-dev
+gdal-bin
+libgl1
+libglib2.0-0
+libgomp1
