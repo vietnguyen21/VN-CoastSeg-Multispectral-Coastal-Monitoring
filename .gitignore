@@ -1,0 +1,64 @@
+# ==============================================================================
+# VN-CoastSeg-Mask2Former - Standard Git Ignore Configuration
+# ==============================================================================
+
+# 1. Python Virtual Environments & Bytecode
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 2. Testing, Coverage & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+test_run/
+
+# 3. Large Raw Satellite & VLUCD Datasets (> 100 MB GitHub Limit)
+1990-2020VNM_v21.09_L2_30m/
+*.zip
+*.tar.gz
+data/raw/
+sample_data/SR_B*.TIF
+sample_data/SR_B*.tif
+
+# Keep small 7-band sample patches (< 2 MB each) for preset demos on GitHub & HF Spaces
+!data/samples/*.tif
+!sample_data/input_7band.tif
+
+# 4. Model Checkpoints (> 100 MB - Use Git LFS on Hugging Face Spaces, ignore on standard GitHub)
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.ckpt
+
+# 5. Agent / IDE / OS Local Configs
+.agents/
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

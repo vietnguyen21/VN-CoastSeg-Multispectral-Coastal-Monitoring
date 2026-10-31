@@ -1,0 +1,160 @@
+{
+  "benchmark_metadata": {
+    "model_architecture": "MultispectralMask2Former (SSL4EO-L ResNet-50 + MSDeformAttn)",
+    "checkpoint": "checkpoints/smoke_checkpoint.pt",
+    "ground_truth_dataset": "VLUCD 30m Level-2 (Nationwide Vietnam)",
+    "sensor": "USGS Landsat 8 OLI Level-2 Surface Reflectance (7 optical channels)",
+    "total_pixels_evaluated": 196608
+  },
+  "overall_metrics": {
+    "overall_accuracy_pct": 56.39,
+    "mIoU_pct": 29.09,
+    "macro_f1_pct": 41.9,
+    "iou_mangrove_pct": 16.26,
+    "iou_aquaculture_pct": 21.49
+  },
+  "class_wise_metrics": [
+    {
+      "class_id": 0,
+      "class_name": "Mangrove & Coastal Wetland",
+      "tp": 4649,
+      "gt_pixels": 19372,
+      "pred_pixels": 13874,
+      "iou": 16.26,
+      "precision": 33.51,
+      "recall": 24.0,
+      "f1": 27.97
+    },
+    {
+      "class_id": 1,
+      "class_name": "Aquaculture",
+      "tp": 12344,
+      "gt_pixels": 22155,
+      "pred_pixels": 47622,
+      "iou": 21.49,
+      "precision": 25.92,
+      "recall": 55.72,
+      "f1": 35.38
+    },
+    {
+      "class_id": 2,
+      "class_name": "Open Water",
+      "tp": 19867,
+      "gt_pixels": 43176,
+      "pred_pixels": 23469,
+      "iou": 42.47,
+      "precision": 84.65,
+      "recall": 46.01,
+      "f1": 59.62
+    },
+    {
+      "class_id": 3,
+      "class_name": "Cropland & Paddy Rice",
+      "tp": 66317,
+      "gt_pixels": 91943,
+      "pred_pixels": 93931,
+      "iou": 55.47,
+      "precision": 70.6,
+      "recall": 72.13,
+      "f1": 71.36
+    },
+    {
+      "class_id": 4,
+      "class_name": "Terrestrial Forest & Shrubland",
+      "tp": 117,
+      "gt_pixels": 7555,
+      "pred_pixels": 2433,
+      "iou": 1.19,
+      "precision": 4.81,
+      "recall": 1.55,
+      "f1": 2.34
+    },
+    {
+      "class_id": 5,
+      "class_name": "Built-up, Urban & Bareland",
+      "tp": 7575,
+      "gt_pixels": 12407,
+      "pred_pixels": 15279,
+      "iou": 37.67,
+      "precision": 49.58,
+      "recall": 61.05,
+      "f1": 54.72
+    }
+  ],
+  "confusion_matrix": [
+    [
+      4649,
+      4163,
+      856,
+      9639,
+      38,
+      27
+    ],
+    [
+      298,
+      12344,
+      1733,
+      7245,
+      55,
+      480
+    ],
+    [
+      443,
+      19850,
+      19867,
+      2851,
+      2,
+      163
+    ],
+    [
+      4858,
+      10634,
+      946,
+      66317,
+      2168,
+      7020
+    ],
+    [
+      3560,
+      205,
+      42,
+      3617,
+      117,
+      14
+    ],
+    [
+      66,
+      426,
+      25,
+      4262,
+      53,
+      7575
+    ]
+  ],
+  "evaluated_patches": [
+    {
+      "name": "Red River Delta (Xuan Thuy National Park)",
+      "region": "Northern Coastal Vietnam (Nam Dinh)",
+      "type": "Estuarine Mangrove & Mudflat",
+      "dimensions": "256x256",
+      "valid_pixels": 65536,
+      "accuracy": 36.71
+    },
+    {
+      "name": "Thai Thuy Coastal Zone",
+      "region": "Northern Coastal Vietnam (Thai Binh)",
+      "type": "Aquaculture Ponds & Coastal Dykes",
+      "dimensions": "256x256",
+      "valid_pixels": 65536,
+      "accuracy": 69.04
+    },
+    {
+      "name": "Tien Lang Estuary",
+      "region": "Northern Coastal Vietnam (Hai Phong)",
+      "type": "Mangrove Wetland & Alluvial Rice",
+      "dimensions": "256x256",
+      "valid_pixels": 65536,
+      "accuracy": 63.42
+    }
+  ]
+}
